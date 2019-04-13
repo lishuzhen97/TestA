@@ -84,20 +84,19 @@ void init_all(void)
 
 void main(void)
 {
-    if((PCON&0x10)==0) //Èç¹ûPOFÎ»=0
+    if((PCON&0x10)==0) //å¦‚æœPOFä½=0
     {
-       PCON=PCON|0x10;  //½«POFÎ»ÖÃ1
-       IAP_CONTR=0x60;  //Èí¸´Î»,´ÓISP¼à¿ØÇøÆô¶¯
+       PCON=PCON|0x10;  //å°†POFä½ç½®1
+       IAP_CONTR=0x60;  //è½¯å¤ä½,ä»ISPç›‘æ§åŒºå¯åŠ¨
     }
     else
     {
-       PCON=PCON&0xef;  //½«POFÎ»ÇåÁã
+       PCON=PCON&0xef;  //å°†POFä½æ¸…é›¶
     }
 
     lcdInitinal();
 	
-    lcdMsg("Õã½­´óÑ§",1,0);
-	lcdMsg("ºùÂ«µºÅË³¤½­",2,0);
+   
 	
     delay_ms(2000);
 
@@ -105,18 +104,18 @@ void main(void)
 	lcdInitinal();
     delay_ms(2000);
     lcdMsg("Hello",1,0);
-    lcdMsg("ĞÖµÜÎÒ",2,0);
-    lcdMsg("ĞèÒªÅ®ÅóÓÑ1000¸ö",3,0);
-    lcdMsg("tell:18989451325",4,0);
+    lcdMsg("word",2,0);
+    lcdMsg("!!!!!!",3,0);
+    lcdMsg("!!!!!!!!!",4,0);
 	delay_ms(10000);
 
     lcdInitinal();
     delay_ms(2000);
 
-    lcdMsg("×´Ì¬£º",1,0);
-    lcdMsg("¿¨ºÅ£º",2,0);
-    lcdMsg("Ïû·Ñ£º",3,0);
-    lcdMsg("Óà¶î£º",4,0);
+    lcdMsg("çŠ¶æ€ï¼š",1,0);
+    lcdMsg("å¡å·ï¼š",2,0);
+    lcdMsg("æ¶ˆè´¹ï¼š",3,0);
+    lcdMsg("ä½™é¢ï¼š",4,0);
 	delay_ms(10000);
     init_all();
 
